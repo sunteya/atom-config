@@ -1,0 +1,61 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "b54b1180-569d-4595-abe5-a28d142c431b"
+  "base16-syntax":
+    scheme: "Chalk"
+    style: "Dark"
+  core:
+    allowPendingPaneItems: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "markdown-table-formatter-z"
+    ]
+    packagesWithKeymapsDisabled: [
+      "sort-lines"
+      "emmet"
+      "atom-beautify"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-light-ui"
+      "Base16-Chalk-Dark"
+    ]
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 13
+    preferredLineLength: 120
+    showInvisibles: true
+  emmet:
+    useEmmetComments: true
+  "exception-reporting":
+    userId: "f7f16457-1db0-42a3-a079-297e0d73e596"
+  "file-types":
+    ".localrc": "source.shell"
+    ".yml.example": "source.yaml"
+    "^Cartfile": "source.swift"
+    "^Procfile": "source.yaml"
+    "^Seedfile": "source.ruby"
+    "_controller.rb": "source.ruby.rails"
+  linter: {}
+  "linter-eslint": {}
+  "linter-rubocop":
+    command: "bundle exec rubocop"
+    disableWhenNoConfigFile: true
+  "linter-ui-default": {}
+  "one-light-ui": {}
+  "vim-mode-plus": {}
+  welcome:
+    showOnStartup: false
