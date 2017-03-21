@@ -20,7 +20,7 @@
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
-'.source.ruby':
+'.source.ruby.rails':
   'validates':
     'prefix': "va"
     'body': 'validates :${1:attribute}${2:,  acceptance: ${3:true}}${4:, confirmation: ${5:true}}${6:,\n

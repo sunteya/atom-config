@@ -1,34 +1,26 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "b54b1180-569d-4595-abe5-a28d142c431b"
-  "base16-syntax":
-    scheme: "Chalk"
-    style: "Dark"
   core:
     allowPendingPaneItems: false
     customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".flowconfig"
-        ".hgrc"
+      "source.ruby": [
+        "Seedfile"
+        "Cartfile"
       ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
+      "source.shell": [
+        ".localrc"
       ]
-      "source.python": [
-        "BUCK"
+      "source.yaml": [
+        "Procfile"
+        "yml.example"
       ]
     disabledPackages: [
-      "markdown-table-formatter-z"
+      "rails-rspec"
     ]
     packagesWithKeymapsDisabled: [
-      "sort-lines"
-      "emmet"
       "atom-beautify"
+      "emmet"
     ]
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
       "atom-light-ui"
       "Base16-Chalk-Dark"
@@ -41,21 +33,15 @@
   emmet:
     useEmmetComments: true
   "exception-reporting":
-    userId: "f7f16457-1db0-42a3-a079-297e0d73e596"
+    userId: "b1bf6432-d888-4164-882b-355f17515f2b"
   "file-types":
-    ".localrc": "source.shell"
-    ".yml.example": "source.yaml"
+    "**/app/controllers/*_controller.rb": "source.ruby.rails"
+    "**/app/models/*.rb": "source.ruby.rails"
     "^Cartfile": "source.swift"
-    "^Procfile": "source.yaml"
-    "^Seedfile": "source.ruby"
-    "_controller.rb": "source.ruby.rails"
-  linter: {}
-  "linter-eslint": {}
   "linter-rubocop":
     command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
-  "linter-ui-default": {}
-  "one-light-ui": {}
-  "vim-mode-plus": {}
+  "linter-ui-default":
+    showPanel: true
   welcome:
     showOnStartup: false

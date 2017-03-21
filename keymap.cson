@@ -41,7 +41,6 @@
   'a q': 'vim-mode-plus:a-subword'
   'i q': 'vim-mode-plus:inner-subword'
 
-
 'atom-text-editor[data-grammar="text html basic"]:not([mini]),
  atom-text-editor[data-grammar*="text html"]:not([mini]),
  atom-text-editor[data-grammar~="css"]:not([mini]),
