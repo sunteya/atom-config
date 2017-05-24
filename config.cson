@@ -1,4 +1,17 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "704fb90d-a755-4d1b-8e31-1deeacb37112"
+  "atom-ctags":
+    extraTagFiles: "gems.tags"
+  "autocomplete-ctags": {}
+  "autocomplete-plus":
+    suppressActivationForEditorClasses: [
+      "narrow"
+    ]
+  "base16-syntax":
+    scheme: "Ashes"
+    style: "Dark"
   core:
     allowPendingPaneItems: false
     customFileTypes:
@@ -14,20 +27,22 @@
         "yml.example"
       ]
     disabledPackages: [
-      "rails-rspec"
+      "symbols-view"
     ]
     packagesWithKeymapsDisabled: [
       "atom-beautify"
       "emmet"
+      "rails-rspec"
+      "git-time-machine"
+      "recent-files-fuzzy-finder"
     ]
     telemetryConsent: "no"
     themes: [
-      "atom-light-ui"
+      "native-ui"
       "Base16-Chalk-Dark"
     ]
   editor:
     fontFamily: "Ubuntu Mono"
-    fontSize: 13
     preferredLineLength: 120
     showInvisibles: true
   emmet:
@@ -35,13 +50,54 @@
   "exception-reporting":
     userId: "b1bf6432-d888-4164-882b-355f17515f2b"
   "file-types":
-    "**/app/controllers/*_controller.rb": "source.ruby.rails"
+    $debug: true
+    "**/.env*": "source.shell"
+    "**/app/controllers/**/*_controller.rb": "source.ruby.rails"
     "**/app/models/*.rb": "source.ruby.rails"
-    "^Cartfile": "source.swift"
+  keystroke:
+    commands: [
+      {
+        name: "leader-yank-line"
+        keystroke: "\" * Y"
+      }
+      {
+        name: "leader-put-after"
+        keystroke: "\" * p"
+      }
+      {
+        name: "leader-put-before"
+        keystroke: "\" * P"
+      }
+    ]
   "linter-rubocop":
     command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 72
+  "markdown-preview":
+    useGitHubStyle: true
+  narrow:
+    GitDiffAll:
+      closeOnConfirm: false
+    Search:
+      closeOnConfirm: false
+    SelectFiles:
+      rememberQuery: true
+    confirmOnUpdateRealFile: false
+  "rails-transporter": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+  "tree-view": {}
+  "vim-mode-clipboard-plus":
+    useVimModePlus: true
+  "vim-mode-plus":
+    highlightSearchExcludeScopes: []
+    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
+  zentabs:
+    maximumOpenedTabs: 10

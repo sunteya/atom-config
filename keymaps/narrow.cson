@@ -1,0 +1,60 @@
+# From outside of narrow-editor
+# -------------------------
+
+# `cmd-e` start `search-by-current-word` only when workspace does NOT have `narrow-editor`.
+# NOTE: When workspace.has-narrow, `cmd-e` is mapped to `query-current-word` by default.
+# 'atom-workspace:not(.has-narrow) atom-text-editor.vim-mode-plus:not(.insert-mode)':
+#   'cmd-e': 'narrow:search-by-current-word'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  # For frequent uses, assign shorter keymap(non-2-step keymap).
+  'ctrl-z': 'narrow:reopen'
+
+  'space f': 'narrow:fold'
+
+  'cmd-o': 'narrow:symbols-by-current-word'
+  'cmd-shift-o': 'narrow:project-symbols-by-current-word'
+
+  # Override default cmd-r and cmd-shift-r
+  'cmd-r': 'narrow:symbols'
+  'cmd-shift-r': 'narrow:project-symbols'
+
+  'space l': 'narrow:scan'
+  'cmd-l': 'narrow:scan-by-current-word'
+
+  # 'space s': 'narrow:search'
+  'space s': 'narrow:search-by-current-word'
+  'space S': 'narrow:search'
+
+  'space G': 'narrow:git-diff-all'
+
+# When workspace has narrow-editor
+'atom-workspace.has-narrow atom-text-editor.vim-mode-plus.normal-mode':
+  'cmd-f': 'narrow:focus' # focus to narrow-editor
+  'cmd-i': 'narrow:focus-prompt' # focus to prompt of narrow-editor
+
+  # Following three command have ctrl- prefixed by default to avoid conflicts.
+  # But I don' care conflict, prefer more accessible keymap.
+  'cmd-[': 'narrow:previous-query-history'
+  'cmd-]': 'narrow:next-query-history'
+  'cmd-e': 'narrow:query-current-word'
+
+# narrow-editor regardless of mode of vim
+'atom-text-editor.narrow.narrow-editor[data-grammar="source narrow"]':
+  'cmd-f': 'narrow:focus'
+  'cmd-i': 'narrow:focus-prompt' # cmd-i to return to calling editor.
+  # Danger: apply change on narrow-editor to real file by `cmd-s`.
+  'cmd-s': 'narrow-ui:update-real-file'
+
+'atom-workspace.has-narrow atom-text-editor.vim-mode-plus.normal-mode,
+  atom-workspace.has-narrow atom-text-editor.vim-mode-plus.visual-mode':
+    # cmd-e to set current word as query of active ui.
+    'cmd-e': 'narrow:query-current-word'
+
+'atom-text-editor.narrow.narrow-editor.vim-mode-plus.normal-mode[data-grammar="source narrow"]':
+  # Danger: I use direct-edit very frequently, so intentionally recover `i` of vim-mode-plus.
+  'i': 'vim-mode-plus:activate-insert-mode'
+  '-': 'narrow-ui:exclude-file'
+  '=': 'narrow-ui:clear-excluded-files'
+  's': 'narrow-ui:select-files'
+  "enter": 'core:confirm' # recover original enter for narrow-editor

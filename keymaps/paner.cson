@@ -1,0 +1,9 @@
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'ctrl-w x': 'paner:swap-pane'
+  'ctrl-w X': 'paner:send-item'
+  # 'ctrl-w enter': 'paner:maximize' # maximize feature is already bundled in vmp
+  'ctrl-w K': 'paner:very-top'
+  'ctrl-w J': 'paner:very-bottom'
+  'ctrl-w H': 'paner:very-left'
+  'ctrl-w L': 'paner:very-right'
+  'ctrl-w v': 'paner:split-left'

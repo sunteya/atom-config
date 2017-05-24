@@ -1,0 +1,4 @@
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'tab': 'about!'
+  ':': 'ex-mode:open'
+  '\\': "vim-mode-plus:set-register-name-to-*"

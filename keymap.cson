@@ -30,26 +30,6 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
-
-'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'tab': 'null'
-  ':': 'ex-mode:open'
-  'q': 'vim-mode-plus:move-to-next-subword'
-  'Q': 'vim-mode-plus:move-to-previous-subword'
-
-'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
-  'a q': 'vim-mode-plus:a-subword'
-  'i q': 'vim-mode-plus:inner-subword'
-
-'atom-text-editor[data-grammar="text html basic"]:not([mini]),
- atom-text-editor[data-grammar*="text html"]:not([mini]),
- atom-text-editor[data-grammar~="css"]:not([mini]),
- atom-text-editor[data-grammar~="scss"]:not([mini])':
-  'ctrl-alt-w': 'emmet:wrap-with-abbreviation'
-  "cmd-'": 'emmet:remove-tag'
-  'ctrl-"': 'emmet:update-tag'
-  'cmd-/': 'emmet:toggle-comment'
-
-'atom-text-editor.insert-mode[data-grammar="text html basic"]:not([mini]),
- atom-text-editor.insert-mode[data-grammar*="text html"]:not([mini])':
-   'tab': 'emmet:expand-abbreviation-with-tab'
+# 
+'atom-workspace':
+  'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'

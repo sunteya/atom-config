@@ -1,0 +1,5 @@
+'atom-text-editor.vim-mode-plus.normal-mode,
+ atom-text-editor.vim-mode-plus.visual-mode':
+  'space m': 'vim-mode-plus-user:quick-highlight-word'
+  'space M': 'quick-highlight:clear'
+  'g m': 'vim-mode-plus-user:quick-highlight'

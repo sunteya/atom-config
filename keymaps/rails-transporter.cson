@@ -1,0 +1,2 @@
+'atom-text-editor[data-grammar~="ruby"]:not([mini])':
+  'ctrl-r s': 'rails-rspec:toggle-spec-file'

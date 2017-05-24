@@ -36,7 +36,7 @@
     'prefix': "respond_with"
     'body': 'respond_with @${1:model}, location: -> { ${2:url} }'
 
-'.text.html.ruby':
+'.text.html.erb':
   '<% binding.pry %>':
     prefix: 'pry'
     body: '<% binding.pry %>'
