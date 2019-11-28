@@ -30,6 +30,24 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
-# 
+#
 'atom-workspace':
   'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
+  '\\ n': 'tree-view:toggle'
+
+'.project-find':
+  'alt-cmd-g': 'user:toggle-exclude-vcs-ignored-paths'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  '\\ p': 'keystroke \" * p'
+  '\\ P': 'keystroke \" * P'
+  '\\ d d': 'keystroke \" _ d d'
+  '\\ D': 'keystroke \" _ D'
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+  '\\ y y': 'keystroke \" * y y'
+  '\\ Y': 'keystroke \" * Y'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  '\\ y': 'keystroke \" * y'
+  '\\ d': 'keystroke \" _ d'

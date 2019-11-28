@@ -8,3 +8,5 @@ storage
 
 packages/
 .apmrc
+/recovery/
+/.atom-socket-secret-*

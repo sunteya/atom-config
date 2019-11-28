@@ -1,2 +1,5 @@
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'ctrl-p': 'clipboard-plus:toggle'
+
+# 'atom-text-editor.vim-mode-plus.insert-mode':
+#   'ctrl-r ctrl-p': 'clipboard-plus:toggle'

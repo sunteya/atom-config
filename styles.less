@@ -20,15 +20,27 @@
   // background-color: whitesmoke;
 }
 
-// style the background and foreground colors on the atom-text-editor-element itself
+// Highlight Git Diff Mark
 atom-text-editor {
-  // color: white;
-  // background-color: hsl(180, 24%, 12%);
-}
+  .gutter .line-number {
+    &.git-line-modified {
+      border-left: 0;
+      padding-left: 0.5em;
+      border-right: 2px solid @syntax-color-modified;
+    }
 
-// style UI elements inside atom-text-editor
-atom-text-editor .cursor {
-  // border-color: red;
+    &.git-line-added {
+      border-left: 0;
+      padding-left: 0.5em;
+      border-right: 2px solid @syntax-color-added;
+    }
+
+    &.git-line-removed:before,
+    &.git-previous-line-removed:before {
+      left: auto;
+      right: -2px;
+    }
+  }
 }
 
 // Compact Tree Line Size

@@ -1,9 +1,14 @@
 "*":
   "atom-beautify":
+    css: {}
+    erb: {}
     general:
       _analyticsUserId: "704fb90d-a755-4d1b-8e31-1deeacb37112"
+    scss: {}
   "atom-ctags":
     extraTagFiles: "gems.tags"
+  "atom-package-deps":
+    ignored: []
   "autocomplete-ctags": {}
   "autocomplete-plus":
     suppressActivationForEditorClasses: [
@@ -26,27 +31,36 @@
         "Procfile"
         "yml.example"
       ]
-    disabledPackages: [
-      "symbols-view"
-    ]
+      "text.ignore": [
+        ".dockerignore"
+      ]
+    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "atom-beautify"
-      "emmet"
       "rails-rspec"
       "git-time-machine"
       "recent-files-fuzzy-finder"
+      "yaml-sortkey"
+      "easysort-yaml"
+      "rails-latest-migration"
+      "emmet"
     ]
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "no"
     themes: [
       "native-ui"
       "Base16-Chalk-Dark"
     ]
+  "easysort-yaml":
+    lineMaxLen: 120
   editor:
-    fontFamily: "Ubuntu Mono"
+    fontFamily: "Iosevka Kai"
+    fontSize: 13
+    maxScreenLineLength: 50000
     preferredLineLength: 120
+    scrollPastEnd: true
     showInvisibles: true
-  emmet:
-    useEmmetComments: true
+  emmet: {}
   "exception-reporting":
     userId: "b1bf6432-d888-4164-882b-355f17515f2b"
   "file-types":
@@ -54,37 +68,59 @@
     "**/.env*": "source.shell"
     "**/app/controllers/**/*_controller.rb": "source.ruby.rails"
     "**/app/models/*.rb": "source.ruby.rails"
-  keystroke:
-    commands: [
-      {
-        name: "leader-yank-line"
-        keystroke: "\" * Y"
-      }
-      {
-        name: "leader-put-after"
-        keystroke: "\" * p"
-      }
-      {
-        name: "leader-put-before"
-        keystroke: "\" * P"
-      }
-    ]
+  "find-and-replace":
+    useRipgrep: true
+  "git-diff": {}
   "linter-rubocop":
-    command: "bundle exec rubocop"
+    command: "/usr/local/bin/rubocopx"
     disableWhenNoConfigFile: true
   "linter-ui-default":
     panelHeight: 72
+    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      "minimap-quick-highlight": true
+      "minimap-quick-highlightDecorationsZIndex": 0
   narrow:
     GitDiffAll:
       closeOnConfirm: false
     Search:
       closeOnConfirm: false
+      searcher: "rg"
     SelectFiles:
       rememberQuery: true
     confirmOnUpdateRealFile: false
-  "rails-transporter": {}
+    locationToOpen: "center"
+    notifiedVimModePlusSpecificDefaultKeymap: true
+    queryCurrentWordByDoubleClick: false
+    relocateUiByTabBarDoubleClick: false
+  "native-ui":
+    tabs: {}
+    ui:
+      macTransparency: false
+  "rails-transporter":
+    viewFileExtension: [
+      "html.erb"
+      "html.slim"
+      "html.haml"
+      "json.jbuilder"
+    ]
+  "recent-files-fuzzy-finder":
+    restoreSession: true
+  "scope-inspector":
+    userId: "8149453d12fde3c987f5ceb011360abe56307d17"
+  "spell-check":
+    locales: [
+      "en-US"
+    ]
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -95,9 +131,18 @@
   "vim-mode-clipboard-plus":
     useVimModePlus: true
   "vim-mode-plus":
+    centerPaneOnMaximizePane: false
     highlightSearchExcludeScopes: []
+    keymapPToPutWithAutoIndent: true
+    keymapYToYankToLastCharacterOfLine: true
+    statusBarModeStringStyle: "long"
     useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
+  "yaml-sortkey": {}
   zentabs:
     maximumOpenedTabs: 10
+".kotlin.source":
+  editor:
+    tabLength: 4
+    tabType: "soft"
